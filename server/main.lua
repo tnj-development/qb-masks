@@ -2,7 +2,6 @@ local QBCore = exports['qb-core']:GetCoreObject()
 local skin
 local data = {}
 
-
 QBCore.Functions.CreateUseableItem("mask", function(source, item) -- change this
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -16,11 +15,11 @@ QBCore.Functions.CreateUseableItem("mask", function(source, item) -- change this
             end
 
             -- MASK BS
-            skin["mask"].item = 1
+            skin["mask"].item = 55
             skin["mask"].texture = 0
 
             data[src] = {
-                mask = 1,
+                mask = 55,
                 item = "mask"
             }
 

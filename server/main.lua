@@ -9,7 +9,7 @@ for k, v in pairs(Config["Masks"]) do
         local Player = QBCore.Functions.GetPlayer(src)
         local ped = GetPlayerPed(src)
         local model = GetEntityModel(ped)
-        if Player.Functions.RemoveItem("mask", 1) then -- change this
+        if Player.Functions.RemoveItem(k, 1) then -- change this
             if model ~= nil then
                 local result = MySQL.Sync.fetchAll('SELECT * FROM playerskins WHERE citizenid = ? AND active = ?', { Player.PlayerData.citizenid, 1 })
                 if result[1] ~= nil then
